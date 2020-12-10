@@ -2,7 +2,7 @@ use itertools::Itertools;
 use std::fs;
 
 fn main() {
-    let rawdata = fs::read_to_string("data/day-7.txt").expect("Unable to read file");
+    let rawdata = fs::read_to_string("data/day-07.txt").expect("Unable to read file");
     let data: Vec<&str> = rawdata.lines().collect();
 
     println!("Input is {:?} lines", data.len());

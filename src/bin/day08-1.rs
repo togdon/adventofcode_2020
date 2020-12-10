@@ -1,7 +1,7 @@
 use std::fs;
 
 fn main() {
-    let rawdata = fs::read_to_string("data/day-8.txt").expect("Unable to read file");
+    let rawdata = fs::read_to_string("data/day-08.txt").expect("Unable to read file");
     let data: Vec<&str> = rawdata.lines().collect();
 
     let mut accumulator = 0;

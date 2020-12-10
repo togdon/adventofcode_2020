@@ -2,7 +2,7 @@ use itertools::Itertools;
 use std::fs;
 
 fn main() {
-    let rawdata = fs::read_to_string("data/day-6.txt").expect("Unable to read file");
+    let rawdata = fs::read_to_string("data/day-06.txt").expect("Unable to read file");
     let data: Vec<&str> = rawdata.split("\n\n").collect();
 
     let mut sum_count = 0;
