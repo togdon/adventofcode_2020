@@ -1,7 +1,6 @@
 use std::fs;
 
 fn run(data: &Vec<usize>, iterations: usize) -> usize {
-
     let mut last_spoken: Vec<Option<usize>> = vec![None; iterations as usize];
 
     for (index, num) in data.iter().enumerate() {
@@ -21,14 +20,18 @@ fn run(data: &Vec<usize>, iterations: usize) -> usize {
                 last_spoken[answer as usize] = Some(iteration);
                 answer = iteration - last_spot;
             }
-        };
+        }
     }
     answer
 }
 
 fn main() {
     let rawdata = fs::read_to_string("data/day-15.txt").expect("Unable to read file");
-    let data: Vec<usize> = rawdata.trim().split(',').map(|num| num.parse().unwrap()).collect();
+    let data: Vec<usize> = rawdata
+        .trim()
+        .split(',')
+        .map(|num| num.parse().unwrap())
+        .collect();
 
     println!("2020 Answer: {}", run(&data, 2020));
     println!("30000000 Answer: {}", run(&data, 30000000));
